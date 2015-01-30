@@ -1,41 +1,44 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <history>
    <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m4 -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F401VC -DSTM32F4XX -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -ID:\SANTIAGO\Universidad\Diplomatura SE\Trabajos Practicos\Laboratorio 1\cmsis -ID:\SANTIAGO\Universidad\Diplomatura SE\Trabajos Practicos\Laboratorio 1 -ID:\SANTIAGO\Universidad\Diplomatura SE\Trabajos Practicos\Laboratorio 1\cmsis_boot -ID:\SANTIAGO\Universidad\Diplomatura SE\Trabajos Practicos -ID:\SANTIAGO\Universidad\Diplomatura SE\Trabajos Practicos\Laboratorio 1\cmsis_lib\include -ID:\SANTIAGO\Universidad\Diplomatura SE\Trabajos Practicos\Laboratorio 1\cmsis_lib -ID:\SANTIAGO\Universidad\Diplomatura SE\Trabajos Practicos\Laboratorio 1\bsp">
-      <target file="stm32f4xx_gpio.o" lastModified="14b38941764">
+      <target file="syscalls.o" lastModified="14b3cfa57e2">
+         <source file="..\..\..\syscalls\syscalls.c" lastModified="14b3cf97f28"/>
+      </target>
+      <target file="stm32f4xx_gpio.o" lastModified="14b3cfa570c">
          <source file="..\..\..\cmsis_lib\source\stm32f4xx_gpio.c" lastModified="14ab7051ebb"/>
       </target>
-      <target file="stm32f4xx_adc.o" lastModified="14b389416f5">
-         <source file="..\..\..\cmsis_lib\source\stm32f4xx_adc.c" lastModified="14ab705b19e"/>
+      <target file="stm32f4xx_adc.o" lastModified="14b3cfa569d">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_adc.c" lastModified="14b3c6567e7"/>
       </target>
-      <target file="stm32f4xx_tim.o" lastModified="14b38941aaf">
+      <target file="stm32f4xx_tim.o" lastModified="14b3cfa5b55">
          <source file="..\..\..\cmsis_lib\source\stm32f4xx_tim.c" lastModified="14ab7057d12"/>
       </target>
-      <target file="system_stm32f4xx.o" lastModified="14b389417bc">
-         <source file="..\..\..\cmsis_boot\system_stm32f4xx.c" lastModified="14ab704e55c"/>
+      <target file="system_stm32f4xx.o" lastModified="14b3cfa5767">
+         <source file="..\..\..\cmsis_boot\system_stm32f4xx.c" lastModified="14b3cf9f711"/>
       </target>
-      <target file="startup_stm32f4xx.o" lastModified="14b3894158a">
-         <source file="..\..\..\cmsis_boot\startup\startup_stm32f4xx.c" lastModified="14ab704e444"/>
+      <target file="startup_stm32f4xx.o" lastModified="14b3cfa54d3">
+         <source file="..\..\..\cmsis_boot\startup\startup_stm32f4xx.c" lastModified="14b3cf9f70a"/>
       </target>
-      <target file="stm32f4xx_syscfg.o" lastModified="14b3894153c">
-         <source file="..\..\..\cmsis_lib\source\stm32f4xx_syscfg.c" lastModified="14ab70608da"/>
+      <target file="stm32f4xx_syscfg.o" lastModified="14b3cfa5483">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_syscfg.c" lastModified="14b3cfa3503"/>
       </target>
-      <target file="stm32f4xx_exti.o" lastModified="14b38941964">
+      <target file="stm32f4xx_exti.o" lastModified="14b3cfa59f1">
          <source file="..\..\..\cmsis_lib\source\stm32f4xx_exti.c" lastModified="14ab7053a16"/>
       </target>
-      <target file="main.o" lastModified="14b3b5f4b1e">
-         <source file="..\..\..\main.c" lastModified="14b3b5f471d"/>
+      <target file="main.o" lastModified="14b3d23d6c9">
+         <source file="..\..\..\main.c" lastModified="14b3d202c8e"/>
       </target>
-      <target file="stm32f4xx_spi.o" lastModified="14b3894183a">
+      <target file="stm32f4xx_spi.o" lastModified="14b3cfa5866">
          <source file="..\..\..\cmsis_lib\source\stm32f4xx_spi.c" lastModified="14ab705560e"/>
       </target>
-      <target file="stm32f4xx_rcc.o" lastModified="14b3894165f">
+      <target file="stm32f4xx_rcc.o" lastModified="14b3cfa55f4">
          <source file="..\..\..\cmsis_lib\source\stm32f4xx_rcc.c" lastModified="14ab7050d9d"/>
       </target>
-      <target file="misc.o" lastModified="14b389419bc">
-         <source file="..\..\..\cmsis_lib\source\misc.c" lastModified="14ab705e784"/>
+      <target file="bsp.o" lastModified="14b3d23d82c">
+         <source file="..\..\..\bsp\bsp.c" lastModified="14b3d202cb6"/>
       </target>
-      <target file="bsp.o" lastModified="14b3b5e0ecf">
-         <source file="..\..\..\bsp\bsp.c" lastModified="14b3b5e0b39"/>
+      <target file="misc.o" lastModified="14b3cfa5a57">
+         <source file="..\..\..\cmsis_lib\source\misc.c" lastModified="14ab705e784"/>
       </target>
    </processor>
 </history>

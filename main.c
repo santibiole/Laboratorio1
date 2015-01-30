@@ -1,4 +1,5 @@
 #include <stdint.h>
+#include <math.h>
 #include "bsp/bsp.h"
 
 /**
@@ -21,8 +22,10 @@ void pulsoLed(uint8_t led, uint32_t tiempo);
  */
 int main(void) {
 	bsp_init();
-	int brillo = 0;
-	int flag = 0;
+	float brillo = 0;
+	float intensidad_rojo = 0;
+	float intensidad_verde = 0;
+	float intensidad_azul = 0;
 
 	led_set_bright(0, brillo);
 	led_set_bright(1, brillo);
@@ -31,21 +34,36 @@ int main(void) {
 	while (1) {
 
 		bsp_delay_ms(10);
-		led_set_bright(0, brillo);
-//		led_set_bright(1, brillo);
-//		led_set_bright(2, brillo);;
 
-		if (brillo >= 100)
-			flag = 0;
-		if (brillo <= 0)
-			flag = 1;
-		if (flag)
-			brillo++;
-		else
-			brillo--;
+		brillo = adc()/100;
+
+		if (brillo >= 0 && brillo < 0.25){
+			intensidad_rojo = 100;
+			intensidad_verde = brillo*100*4;
+			intensidad_azul = 0;
+		}
+		if (brillo >= 0.25 && brillo < 0.5){
+			intensidad_rojo = (100-((brillo-0.25)*100*4));
+			intensidad_verde = 100;
+			intensidad_azul = ((brillo-0.25)*100*4);
+		}
+		if (brillo >= 0.5 && brillo < 0.75){
+			intensidad_rojo = 0;
+			intensidad_verde = (100-((brillo-0.5)*100*4));
+			intensidad_azul = 100;
+		}
+		if (brillo >= 0.75 && brillo <= 1){
+			intensidad_rojo = ((brillo-0.75)*100*4);
+			intensidad_verde = 0;
+			intensidad_azul = (100-((brillo-0.75)*100*4));
+		}
+
+		led_set_bright(0,intensidad_rojo);
+		led_set_bright(1,intensidad_verde);
+		led_set_bright(2,intensidad_azul);
+
 	}
 }
-
 
 void pulsoLed(uint8_t led, uint32_t tiempo){
 	led_on(led);

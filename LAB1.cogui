@@ -14,38 +14,43 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="D:/SANTIAGO/Universidad/Diplomatura SE/Trabajos Practicos/Laboratorio 1/main.c" title="main.c" tooltip="D:/SANTIAGO/Universidad/Diplomatura SE/Trabajos Practicos/Laboratorio 1/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LAB1/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="544" selectionTopPixel="285"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="41" selectionTopPixel="225"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="bsp.c" partName="bsp.c" path="D:/SANTIAGO/Universidad/Diplomatura SE/Trabajos Practicos/Laboratorio 1/bsp/bsp.c" title="bsp.c" tooltip="D:/SANTIAGO/Universidad/Diplomatura SE/Trabajos Practicos/Laboratorio 1/bsp/bsp.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LAB1/bsp/bsp.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1762" selectionTopPixel="615"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7922" selectionTopPixel="1276"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="bsp.h" partName="bsp.h" path="D:/SANTIAGO/Universidad/Diplomatura SE/Trabajos Practicos/Laboratorio 1/bsp/bsp.h" title="bsp.h" tooltip="D:/SANTIAGO/Universidad/Diplomatura SE/Trabajos Practicos/Laboratorio 1/bsp/bsp.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LAB1/bsp/bsp.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="800" selectionTopPixel="256"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="740" selectionTopPixel="331"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_tim.h" partName="stm32f4xx_tim.h" path="D:/SANTIAGO/Universidad/Diplomatura SE/Trabajos Practicos/Laboratorio 1/cmsis_lib/include/stm32f4xx_tim.h" title="stm32f4xx_tim.h" tooltip="D:/SANTIAGO/Universidad/Diplomatura SE/Trabajos Practicos/Laboratorio 1/cmsis_lib/include/stm32f4xx_tim.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LAB1/cmsis_lib/include/stm32f4xx_tim.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="15" selectionOffset="12069" selectionTopPixel="1575"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_adc.c" partName="stm32f4xx_adc.c" path="D:/SANTIAGO/Universidad/Diplomatura SE/Trabajos Practicos/Laboratorio 1/cmsis_lib/source/stm32f4xx_adc.c" title="stm32f4xx_adc.c" tooltip="D:/SANTIAGO/Universidad/Diplomatura SE/Trabajos Practicos/Laboratorio 1/cmsis_lib/source/stm32f4xx_adc.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LAB1/cmsis_lib/source/stm32f4xx_adc.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="64384" selectionTopPixel="24135"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="math.h" partName="math.h" title="math.h" tooltip="C:\Program Files (x86)\GNU Tools ARM Embedded\4.8 2014q2\arm-none-eabi\include\math.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" path="C:\Program Files (x86)\GNU Tools ARM Embedded\4.8 2014q2\arm-none-eabi\include\math.h" project="LAB1"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2767" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
 <view id="org.eclipse.debug.ui.ExpressionView" partName="Expressions">
 <viewState>
-<ExpressionKeySet ExpKeys="*leds_pwm[0],*leds_pwm[1],*leds_pwm[2],value,"/>
+<ExpressionKeySet ExpKeys="brillo,"/>
 </viewState>
 </view>
 <view id="org.coocox.component.ui.ComponentView" partName="Components">
 <viewState/>
 </view>
 <view id="org.coocox.builder.ui.views.ProjectView" partName="Project">
-<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="0">
+<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="13">
 <expanded>
 <element path="/LAB1"/>
 <element path="/LAB1/bsp"/>
@@ -53,9 +58,10 @@
 <element path="/LAB1/cmsis_lib"/>
 <element path="/LAB1/cmsis_lib/include"/>
 <element path="/LAB1/cmsis_lib/source"/>
+<element path="/LAB1/syscalls"/>
 </expanded>
 <selection>
-<element path="/LAB1/bsp/bsp.h"/>
+<element path="/LAB1/cmsis_lib/source/stm32f4xx_tim.c"/>
 </selection>
 </viewState>
 </view>
@@ -72,6 +78,9 @@
 <viewState/>
 </view>
 <view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
+<viewState/>
+</view>
+<view id="org.coocox.component.ui.Help" partName="Help">
 <viewState/>
 </view>
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
@@ -114,6 +123,7 @@
 <fastViewBar fastViewLocation="131072" id="org.eclipse.ui.internal.ViewStack@6e49a4" orientation="512" selectedTabId="org.coocox.component.ui.Help" style="1">
 <fastViews>
 <view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
+<view id="org.coocox.component.ui.Help" ratio="0.29977462"/>
 </fastViews>
 </fastViewBar>
 <fastViewBar fastViewLocation="1024" id="org.eclipse.ui.internal.ViewStack@107d468" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="1">
@@ -214,8 +224,8 @@
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <hide_toolbar_item_id id="org.coocox.builder.ui.build"/>
 <hide_toolbar_item_id id="org.coocox.welcome.ui.action.welcome"/>
-<hide_toolbar_item_id id="org.coocox.component.ui.ShowRepositoryAction"/>
 <hide_toolbar_item_id id="org.coocox.codebugger.configuration.coideProgramDownloadAction"/>
+<hide_toolbar_item_id id="org.coocox.component.ui.ShowRepositoryAction"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.debug.ui.DebugView"/>
 <view id="org.eclipse.debug.ui.BreakpointView"/>
@@ -285,156 +295,160 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/LAB1/main.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/LAB1/bsp/bsp.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/LAB1/bsp/bsp.h"/>
+<editor factoryID="org.coocox.component.board.ui.editor.BoardEditorElementFactory" id="org.coocox.component.board.ui.editor.BoardBrowserEditor">
+<subPage/>
+</editor>
+<editor factoryID="org.coocox.component.board.ui.editor.BoardEditorElementFactory" id="org.coocox.component.board.ui.editor.BoardBrowserEditor">
+<subPage/>
+</editor>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/LAB1/cmsis_lib/source/stm32f4xx_adc.c"/>
+<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="C:\Program Files (x86)\GNU Tools ARM Embedded\4.8 2014q2\arm-none-eabi\include\math.h" project="LAB1"/>
 </editors>
 <item historyLabel="main.c" index="0">
-<position/>
+<position info="not_deleted" x="773" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="702" y="0"/>
+<item historyLabel="bsp.c" index="1">
+<position info="not_deleted" x="7233" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="742" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="780" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="795" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
+<item historyLabel="bsp.h" index="2">
 <position info="not_deleted" x="835" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="562" y="0"/>
+<item historyLabel="bsp.c" index="1">
+<position info="not_deleted" x="7790" y="0"/>
+</item>
+<item historyLabel="Repository" index="3"/>
+<item historyLabel="bsp.c" index="1">
+<position info="not_deleted" x="7790" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="604" y="0"/>
+<position info="not_deleted" x="773" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="696" y="0"/>
+<item historyLabel="bsp.c" index="1">
+<position info="not_deleted" x="7790" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="702" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="742" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="780" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="795" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
+<item historyLabel="bsp.h" index="2">
 <position info="not_deleted" x="835" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="562" y="0"/>
+<item historyLabel="bsp.c" index="1">
+<position info="not_deleted" x="7790" y="0"/>
+</item>
+<item historyLabel="Repository" index="4"/>
+<item historyLabel="bsp.c" index="1">
+<position info="not_deleted" x="8501" y="0"/>
+</item>
+<item historyLabel="bsp.h" index="2">
+<position info="not_deleted" x="743" y="0"/>
+</item>
+<item historyLabel="bsp.c" index="1">
+<position info="not_deleted" x="1965" y="0"/>
+</item>
+<item historyLabel="bsp.h" index="2">
+<position info="not_deleted" x="736" y="0"/>
+</item>
+<item historyLabel="bsp.c" index="1">
+<position info="not_deleted" x="2024" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="604" y="0"/>
+<position info="not_deleted" x="773" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="696" y="0"/>
+<position info="not_deleted" x="661" y="0"/>
+</item>
+<item historyLabel="bsp.c" index="1">
+<position info="not_deleted" x="2024" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="776" y="0"/>
+</item>
+<item historyLabel="bsp.c" index="1">
+<position info="not_deleted" x="2009" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="776" y="0"/>
+</item>
+<item historyLabel="bsp.c" index="1">
+<position info="not_deleted" x="2009" y="0"/>
+</item>
+<item historyLabel="bsp.h" index="2">
+<position info="not_deleted" x="740" y="0"/>
+</item>
+<item historyLabel="bsp.c" index="1">
+<position info="not_deleted" x="2009" y="0"/>
+</item>
+<item historyLabel="bsp.h" index="2">
+<position info="not_deleted" x="740" y="0"/>
+</item>
+<item historyLabel="bsp.c" index="1">
+<position info="not_deleted" x="2009" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="776" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="785" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="478" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="642" y="0"/>
+</item>
+<item historyLabel="stm32f4xx_adc.c" index="5">
+<position info="not_deleted" x="64384" y="0"/>
+</item>
+<item historyLabel="bsp.c" index="1">
+<position info="not_deleted" x="9097" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="642" y="0"/>
+</item>
+<item historyLabel="bsp.c" index="1">
+<position info="not_deleted" x="9097" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="642" y="0"/>
+</item>
+<item historyLabel="bsp.c" index="1">
+<position info="not_deleted" x="7922" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="478" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="490" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="642" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
 <position/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="702" y="0"/>
+<item historyLabel="math.h" index="6">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="742" y="0"/>
+<position info="not_deleted" x="661" y="0"/>
+</item>
+<item historyLabel="math.h" index="6">
+<position info="not_deleted" x="2767" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="780" y="0"/>
+<position info="not_deleted" x="661" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="795" y="0"/>
+<position info="not_deleted" x="41" y="0"/>
 </item>
+<item historyLabel="Repository" index="4"/>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="835" y="0"/>
+<position info="not_deleted" x="41" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="562" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="604" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="696" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="702" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="742" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="780" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="795" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="835" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="562" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="604" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="696" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="702" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="742" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="780" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="795" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="835" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="562" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="604" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="696" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="702" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="742" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="780" y="0"/>
+<item historyLabel="math.h" index="6">
+<position info="not_deleted" x="2767" y="0"/>
 </item>
 <item active="true" historyLabel="main.c" index="0">
-<position info="not_deleted" x="795" y="0"/>
+<position info="not_deleted" x="41" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -443,8 +457,30 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="math.h" tooltip="C:\Program Files (x86)\GNU Tools ARM Embedded\4.8 2014q2\arm-none-eabi\include\math.h">
+<persistable path="C:\Program Files (x86)\GNU Tools ARM Embedded\4.8 2014q2\arm-none-eabi\include\math.h" project="LAB1"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_adc.c" tooltip="LAB1/cmsis_lib/source/stm32f4xx_adc.c">
+<persistable path="/LAB1/cmsis_lib/source/stm32f4xx_adc.c"/>
+</file>
+<file factoryID="org.coocox.component.board.ui.editor.BoardEditorElementFactory" id="org.coocox.component.board.ui.editor.BoardBrowserEditor" name="Board" tooltip="Board">
+<persistable>
+<subPage/>
+</persistable>
+</file>
+<file factoryID="org.coocox.component.board.ui.editor.BoardEditorElementFactory" id="org.coocox.component.board.ui.editor.BoardBrowserEditor" name="Board" tooltip="Board">
+<persistable>
+<subPage/>
+</persistable>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_tim.h" tooltip="LAB1/cmsis_lib/include/stm32f4xx_tim.h">
 <persistable path="/LAB1/cmsis_lib/include/stm32f4xx_tim.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_tim.c" tooltip="LAB1/cmsis_lib/source/stm32f4xx_tim.c">
+<persistable path="/LAB1/cmsis_lib/source/stm32f4xx_tim.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_gpio.h" tooltip="LAB1/cmsis_lib/include/stm32f4xx_gpio.h">
+<persistable path="/LAB1/cmsis_lib/include/stm32f4xx_gpio.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_gpio.c" tooltip="LAB1/cmsis_lib/source/stm32f4xx_gpio.c">
 <persistable path="/LAB1/cmsis_lib/source/stm32f4xx_gpio.c"/>
@@ -467,24 +503,8 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="bsp.c" tooltip="TP4-Interrupciones-Timer-y-Boton/bsp/bsp.c">
 <persistable path="/TP4-Interrupciones-Timer-y-Boton/bsp/bsp.c"/>
 </file>
-<file factoryID="org.coocox.component.board.ui.editor.BoardEditorElementFactory" id="org.coocox.component.board.ui.editor.BoardBrowserEditor" name="Board" tooltip="Board">
-<persistable>&#x0A;<subPage/>
-</persistable>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="TP4-Interrupciones-Timer-y-Boton/main.c">
 <persistable path="/TP4-Interrupciones-Timer-y-Boton/main.c"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="D:\SANTIAGO\Universidad\Diplomatura SE\Clase 15\TP4-Interrupciones-Timer-y-Boton-master\main.c">
-<persistable uri="file:/D:/SANTIAGO/Universidad/Diplomatura%20SE/Clase%2015/TP4-Interrupciones-Timer-y-Boton-master/main.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_gpio.h" tooltip="TP1-Blinky/cmsis_lib/include/stm32f4xx_gpio.h">
-<persistable path="/TP1-Blinky/cmsis_lib/include/stm32f4xx_gpio.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_rcc.c" tooltip="TP1-Blinky/cmsis_lib/source/stm32f4xx_rcc.c">
-<persistable path="/TP1-Blinky/cmsis_lib/source/stm32f4xx_rcc.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="core_cm4.h" tooltip="TP1-Blinky/cmsis/core_cm4.h">
-<persistable path="/TP1-Blinky/cmsis/core_cm4.h"/>
 </file>
 </mruList>
 </workbench>

@@ -43,13 +43,18 @@ void bsp_delay_ms(uint16_t x);
 uint8_t sw_getState();
 
 /**
+ * @brief Lectura ADC
+ */
+uint16_t read_adc();
+
+/**
+ * @brief Valor Potenciometro a Leds
+ */
+float adc();
+
+/**
  * @brief Inicializacion de los servicios de BSP
  */
 void bsp_init();
-
-/**
- * @brief Toma de datos del acelerómetro
- */
-float bsp_get_acc (char axis);
 
 #endif

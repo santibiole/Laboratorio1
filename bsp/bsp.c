@@ -1,10 +1,11 @@
 #include <stdint.h>
 #include "stm32f4xx.h"			// Header del micro
+#include "stm32f4xx_adc.h"		// Módulo analógico/digital
+#include "stm32f4xx_exti.h"		// Controlador interrupciones externas
 #include "stm32f4xx_gpio.h"		// Perifericos de E/S
 #include "stm32f4xx_rcc.h"		// Para configurar el (Reset and clock controller)
-#include "stm32f4xx_tim.h"		// Modulos Timers
-#include "stm32f4xx_exti.h"		// Controlador interrupciones externas
 #include "stm32f4xx_syscfg.h"	// configuraciones Generales
+#include "stm32f4xx_tim.h"		// Modulos Timers
 #include "misc.h"				// Vectores de interrupciones (NVIC)
 #include "bsp.h"
 
@@ -13,6 +14,9 @@
 #define RGB_B GPIO_Pin_4
 
 #define BOTON GPIO_Pin_0
+
+#define RESOLUCION_ADC	4095
+#define PORCENTAJE 100
 
 /* Puertos de los leds disponibles */
 GPIO_TypeDef* leds_port[] = {GPIOB, GPIOB, GPIOB};
@@ -56,6 +60,10 @@ void bsp_delay_ms(uint16_t x){
 	while (bsp_count_ms);
 }
 
+float adc (void){
+	return (read_adc()*PORCENTAJE/RESOLUCION_ADC);
+}
+
 /**
  * @brief Interrupcion llamada cuando se preciona el pulsador
  */
@@ -86,12 +94,14 @@ void TIM2_IRQHandler(void) {
 	}
 }
 
+void bsp_init_adc();
 void bsp_led_init();
+void bsp_pwm_init();
 void bsp_sw_init();
 void bsp_timer_init();
-void bsp_pwm_init();
 
 void bsp_init() {
+	bsp_adc_init();
 	//bsp_led_init();
 	bsp_pwm_init();
 	bsp_sw_init();
@@ -178,9 +188,7 @@ void bsp_timer_init(void) {
 	TIM_ITConfig(TIM2, TIM_IT_Update, ENABLE); // Inicializamos la interrupción.
 	/* TIM2 contador habilitado */
 	TIM_Cmd(TIM2, ENABLE);
-
 }
-
 
 void bsp_pwm_init(void) {
 	TIM_TimeBaseInitTypeDef TIM_config;
@@ -237,5 +245,44 @@ void bsp_pwm_init(void) {
 	TIM_ARRPreloadConfig(TIM3, ENABLE);
 
 	TIM_Cmd(TIM3, ENABLE);
+}
 
+/**
+ * @brief Inicializa ADC
+ */
+void bsp_adc_init(void) {
+	// Config structs
+	GPIO_InitTypeDef GPIO_InitStruct;
+	ADC_CommonInitTypeDef ADC_CommonInitStruct;
+	ADC_InitTypeDef ADC1_InitStruct;
+	// Enable the clock for ADC and the ADC GPIOs
+
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1, ENABLE);
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC, ENABLE);
+	// Configure these ADC pins in analog mode using GPIO_Init();
+	GPIO_StructInit(&GPIO_InitStruct); // Reset gpio init structure
+	GPIO_InitStruct.GPIO_Pin = GPIO_Pin_2;
+	GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AIN; // Obvezno AIN !!!
+	GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+	// Common ADC init sets the prescaler
+	ADC_CommonStructInit(&ADC_CommonInitStruct);
+	ADC_CommonInitStruct.ADC_Prescaler = ADC_Prescaler_Div4;
+	ADC_CommonInit(&ADC_CommonInitStruct);
+	/* ADC1 Configuration */
+	ADC_StructInit(&ADC1_InitStruct);
+	ADC1_InitStruct.ADC_Resolution = ADC_Resolution_12b;
+	ADC_Init(ADC1, &ADC1_InitStruct);
+	ADC_Cmd(ADC1, ENABLE);
+	/* Now do the setup */
+	ADC_Init(ADC1, &ADC1_InitStruct);
+	/* Enable ADC1 */
+	ADC_Cmd(ADC1, ENABLE);
+}
+
+uint16_t read_adc() {
+	ADC_RegularChannelConfig(ADC1, 12, 1, ADC_SampleTime_15Cycles);
+	ADC_SoftwareStartConv(ADC1);
+	while (ADC_GetFlagStatus(ADC1, ADC_FLAG_EOC) != SET);
+	return ADC_GetConversionValue(ADC1);
 }
